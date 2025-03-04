@@ -147,7 +147,247 @@ This command will:
 ### Sample Output
 
 ```bash
+                         _               _         _     _   _                              _   _               _
+   __ _  ___         ___| |__   ___  ___| | __    | |__ | |_| |_ _ __        _ __ ___   ___| |_| |__   ___   __| |___
+  / _' |/ _ \ _____ / __| '_ \ / _ \/ __| |/ /____| '_ \| __| __| '_ \ _____| '_ ' _ \ / _ \ __| '_ \ / _ \ / _' / __|
+ | (_| | (_) |_____| (__| | | |  __/ (__|   <_____| | | | |_| |_| |_) |_____| | | | | |  __/ |_| | | | (_) | (_| \__ \
+  \__, |\___/       \___|_| |_|\___|\___|_|\_\    |_| |_|\__|\__| .__/      |_| |_| |_|\___|\__|_| |_|\___/ \__,_|___/
+  |___/                                                         |_|
 
+Author: Abhinandan Khurana aka @l0u51f3r007
+go-check-http-methods v1.0.0 - Results
+Timestamp: 2025-03-04T16:41:01+05:30
+
+URL: https://example.com
+METHOD     CODE     STATUS                                   RESPONSE_TIME  VULNERABILITY
+----------------------------------------------------------------------------------------------------
+POST        403       403 Forbidden                             928
+----------------------------------------------------------------------------------------------------
+PROPFIND    501       501 Not Implemented                       928           DANGEROUS
+----------------------------------------------------------------------------------------------------
+HEAD        200       200 OK                                    929
+----------------------------------------------------------------------------------------------------
+PATCH       501       501 Not Implemented                       929
+----------------------------------------------------------------------------------------------------
+DELETE      501       501 Not Implemented                       939           DANGEROUS
+----------------------------------------------------------------------------------------------------
+GET         200       200 OK                                    939
+----------------------------------------------------------------------------------------------------
+CONNECT     400       400 Bad Request                           946
+----------------------------------------------------------------------------------------------------
+TRACE       403       403 Forbidden                             960           DANGEROUS
+----------------------------------------------------------------------------------------------------
+PUT         501       501 Not Implemented                       963           DANGEROUS
+----------------------------------------------------------------------------------------------------
+OPTIONS     501       501 Not Implemented                       1027
+----------------------------------------------------------------------------------------------------
+MKCOL       501       501 Not Implemented                       227           DANGEROUS
+----------------------------------------------------------------------------------------------------
+COPY        501       501 Not Implemented                       245           DANGEROUS
+----------------------------------------------------------------------------------------------------
+MOVE        501       501 Not Implemented                       283           DANGEROUS
+----------------------------------------------------------------------------------------------------
+PROPPATCH   501       501 Not Implemented                       348           DANGEROUS
+----------------------------------------------------------------------------------------------------
+LOCK        501       501 Not Implemented                       810           DANGEROUS
+----------------------------------------------------------------------------------------------------
+UNLINK      400       400 Bad Request                           785
+----------------------------------------------------------------------------------------------------
+LINK        400       400 Bad Request                           789
+----------------------------------------------------------------------------------------------------
+PURGE       400       400 Bad Request                           803
+----------------------------------------------------------------------------------------------------
+UNLOCK      501       501 Not Implemented                       809           DANGEROUS
+----------------------------------------------------------------------------------------------------
+```
+
+### Sample JSON output
+
+```json
+{
+  "tool_name": "go-check-http-methods",
+  "tool_version": "1.0.0",
+  "tool_author": "Abhinandan Khurana aka @l0u51f3r007",
+  "timestamp": "2025-03-04T16:41:57+05:30",
+  "results": [
+    {
+      "url": "https://example.com",
+      "results": [
+        {
+          "method": "CONNECT",
+          "status_code": 400,
+          "status": "400 Bad Request",
+          "response_time_ms": 810,
+          "content_length": 312,
+          "is_dangerous": false,
+          "is_vulnerable": false
+        },
+        {
+          "method": "TRACE",
+          "status_code": 403,
+          "status": "403 Forbidden",
+          "response_time_ms": 810,
+          "content_length": 359,
+          "is_dangerous": true,
+          "is_vulnerable": false
+        },
+        {
+          "method": "PATCH",
+          "status_code": 501,
+          "status": "501 Not Implemented",
+          "response_time_ms": 811,
+          "content_length": 336,
+          "is_dangerous": false,
+          "is_vulnerable": false
+        },
+        {
+          "method": "POST",
+          "status_code": 403,
+          "status": "403 Forbidden",
+          "response_time_ms": 813,
+          "content_length": 359,
+          "is_dangerous": false,
+          "is_vulnerable": false
+        },
+        {
+          "method": "OPTIONS",
+          "status_code": 501,
+          "status": "501 Not Implemented",
+          "response_time_ms": 813,
+          "content_length": 19,
+          "is_dangerous": false,
+          "is_vulnerable": false
+        },
+        {
+          "method": "DELETE",
+          "status_code": 501,
+          "status": "501 Not Implemented",
+          "response_time_ms": 810,
+          "content_length": 339,
+          "is_dangerous": true,
+          "is_vulnerable": false
+        },
+        {
+          "method": "PUT",
+          "status_code": 501,
+          "status": "501 Not Implemented",
+          "response_time_ms": 810,
+          "content_length": 334,
+          "is_dangerous": true,
+          "is_vulnerable": false
+        },
+        {
+          "method": "HEAD",
+          "status_code": 200,
+          "status": "200 OK",
+          "response_time_ms": 810,
+          "content_length": 0,
+          "is_dangerous": false,
+          "is_vulnerable": false
+        },
+        {
+          "method": "GET",
+          "status_code": 200,
+          "status": "200 OK",
+          "response_time_ms": 810,
+          "content_length": 1256,
+          "is_dangerous": false,
+          "is_vulnerable": false
+        },
+        {
+          "method": "PROPFIND",
+          "status_code": 501,
+          "status": "501 Not Implemented",
+          "response_time_ms": 810,
+          "content_length": 339,
+          "is_dangerous": true,
+          "is_vulnerable": false
+        },
+        {
+          "method": "LOCK",
+          "status_code": 501,
+          "status": "501 Not Implemented",
+          "response_time_ms": 299,
+          "content_length": 337,
+          "is_dangerous": true,
+          "is_vulnerable": false
+        },
+        {
+          "method": "MKCOL",
+          "status_code": 501,
+          "status": "501 Not Implemented",
+          "response_time_ms": 300,
+          "content_length": 336,
+          "is_dangerous": true,
+          "is_vulnerable": false
+        },
+        {
+          "method": "LINK",
+          "status_code": 400,
+          "status": "400 Bad Request",
+          "response_time_ms": 762,
+          "content_length": 312,
+          "is_dangerous": false,
+          "is_vulnerable": false
+        },
+        {
+          "method": "UNLOCK",
+          "status_code": 501,
+          "status": "501 Not Implemented",
+          "response_time_ms": 764,
+          "content_length": 339,
+          "is_dangerous": true,
+          "is_vulnerable": false
+        },
+        {
+          "method": "MOVE",
+          "status_code": 501,
+          "status": "501 Not Implemented",
+          "response_time_ms": 790,
+          "content_length": 335,
+          "is_dangerous": true,
+          "is_vulnerable": false
+        },
+        {
+          "method": "PURGE",
+          "status_code": 400,
+          "status": "400 Bad Request",
+          "response_time_ms": 789,
+          "content_length": 312,
+          "is_dangerous": false,
+          "is_vulnerable": false
+        },
+        {
+          "method": "PROPPATCH",
+          "status_code": 501,
+          "status": "501 Not Implemented",
+          "response_time_ms": 791,
+          "content_length": 342,
+          "is_dangerous": true,
+          "is_vulnerable": false
+        },
+        {
+          "method": "COPY",
+          "status_code": 501,
+          "status": "501 Not Implemented",
+          "response_time_ms": 793,
+          "content_length": 335,
+          "is_dangerous": true,
+          "is_vulnerable": false
+        },
+        {
+          "method": "UNLINK",
+          "status_code": 400,
+          "status": "400 Bad Request",
+          "response_time_ms": 799,
+          "content_length": 312,
+          "is_dangerous": false,
+          "is_vulnerable": false
+        }
+      ]
+    }
+  ]
+}
 ```
 
 ## 🏗️ Building from Source
