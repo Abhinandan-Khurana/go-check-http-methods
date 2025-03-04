@@ -1,4 +1,13 @@
-# go-check-http-methods
+<p align="center">
+  <img src="./go-check-http-methods.svg" width="300" height="300">
+</p>
+
+<p align="center">
+  <a href="https://goreportcard.com/report/github.com/Abhinandan-Khurana/go-check-http-methods"><img src="https://goreportcard.com/badge/github.com/Abhinandan-Khurana/go-check-http-methods" alt="Go Report Card"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
+  <a href="https://golang.org/doc/devel/release.html"><img src="https://img.shields.io/badge/Go-1.23+-00ADD8.svg" alt="Go Version"></a>
+<img src="https://img.shields.io/badge/version-v1.0.0-blue.svg" alt="Version">
+</p>
 
 A powerful, fast, and lightweight Go tool for testing HTTP method security across web applications and servers. Detect HTTP Verb Tampering vulnerabilities, dangerous methods, and server misconfigurations with ease.
 
